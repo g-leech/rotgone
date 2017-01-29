@@ -1,10 +1,20 @@
 # rotgone : Internet Archive your links or rot in posterity
 
-The average hyperlinked page is available for less than 100 days. So a notable fraction of the context and value of published web content is decaying over every short time frame.
+---
 
-`rotgone` finds and replaces links in your files: it substitutes in the Internet Archive (IA) link, adding the page to IA if it isn’t yet archived. There’s a node CLI and there will be a client-side rewriter in vanilla JS. Maybe a browser plugin, as a doomed outreach attempt.
+### Just after starting this grand endeavour I found out about [Gwern's complete solution][https://hackage.haskell.org/package/archiver].
 
- 
+I wrote a bash script for myself anyway. The text following is here to show how excited I can get by An Idea: 
+
+---
+
+The average hyperlinked page is available for less than 100 days after first being linked. So a notable fraction of the context and value of published web content is decaying, over short timeframes. In fact, a given set of links should mostly be gone within 10 years.
+
+Link shorteners are another serious threat to the link ecology, since, if the shortener goes down, all that meaning is lost *even if the pages are still live*.
+
+`rotgone` finds and replaces fragile links in your files: it substitutes in the Internet Archive (IA) link, adding the page to IA if it isn’t yet archived. There’s a node CLI and will be a client-side rewriter in vanilla JS. Maybe a browser plugin, as a doomed outreach attempt.
+
+---
 
 ## Usage
 
@@ -32,7 +42,7 @@ The average hyperlinked page is available for less than 100 days. So a notable f
 
 * `--longen`. expand shortened links, replace with original or archive
 
-  
+---  
 
 ### Client-side
 
@@ -46,8 +56,7 @@ On page load it will fire a request and rewrite your `hrefs` with IA.
 (The IA's page-save service is slow, bless them, ~10s per page: try it yourself: "http://web.archive.org/save/{your url}".)
 
 
- 
-
+---
  
 
 ### Development Schedule
